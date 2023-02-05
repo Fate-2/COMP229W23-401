@@ -1,0 +1,18 @@
+{
+  "name": "comp229-w2023-project1",
+  "version": "0.0.1",
+  "description": "this is my application for project1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "comp229",
+    "w2023"
+  ],
+  "author": "Shemal Grey",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
