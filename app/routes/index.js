@@ -1,10 +1,16 @@
 import {Router } from 'express';
-import {helloWorld, goodbyeWorld} from '../controllers/index.js';
+import {displayAboutPage, displayContactPage, displayHomePage, displayProjectsPage, displayServicesPage} from '../controllers/index.js';
 
 const router = Router();
 
-router.get('/hello', helloWorld);
+router.get('/', displayHomePage);
+router.get('/home', displayHomePage);
+router.get('/about', displayAboutPage);
+router.get('/services', displayServicesPage);
+router.get('/projects', displayProjectsPage);
+router.get('/contact', displayContactPage);
 
-router.get('/goodbye', goodbyeWorld);
+
+
 
 export default router;

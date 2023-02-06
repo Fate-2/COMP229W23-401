@@ -1,11 +1,19 @@
-// Index Controller
+export function displayHomePage(req, res, next){
+        res.render('index', {title: 'Home', page: 'home'});
+}
 
-export function helloWorld(req, res, next){
-    res.setHeader('Content-Type','text/plain');
-    res.end('Hello World');
-    }
+export function displayAboutPage(req, res, next){
+    res.render('index', {title: 'About', page: 'about'});
+}
 
- export function goodbyeWorld(req, res, next){
-    res.setHeader('Content-Type','text/plain');
-    res.end('Goodbye World');
-}   
+export function displayServicesPage(req, res, next){
+    res.render('index', {title: 'Services', page: 'services'});
+}
+
+export function displayProjectsPage(req, res, next){
+    res.render('index', {title: 'Projects', page: 'projects'});
+}
+
+export function displayContactPage(req, res, next){
+    res.render('index', {title: 'Contact', page: 'contact'});
+}
