@@ -8,11 +8,22 @@ import path, {dirname} from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// Import Mongoose Module
+import mongoose from 'mongoose';
+
 // Configuration Module
-import { Secret } from '../config/index.js';
+import { Secret, MongoURI } from '../config/index.js';
 
 // Import Routes
 import indexRouter from '../app/routes/index.js';
+
+// Complete DB Configuration
+mongoose.connect(MongoURI);
+const db = mongoose.connection;
+
+// Database Listeners
+db.on('open', () => console.log(`Connected to MongoDB at ${MongoURI} `))
+db.on('error', () => console.log("Mongo Connection Error"));
 
 // Instantiat the express application
 const app = express();
