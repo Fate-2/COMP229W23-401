@@ -21,8 +21,20 @@
           <li class="nav-item">
             <a class="nav-link <%= (page== 'contact') ? 'active' : ''%>" aria-current="page" href="/contact">Contact</a>
           </li>
-        </ul>
+          <li class="nav-item">
+            <a class="nav-link <%= (page == 'movies/list') ? 'active' : ''%> " aria-current="page" href="/movie-list">Movie List</a>
+          </li> 
+            
+          <% if( displayName) { %>          
+            <li class="nav-item">              
+              <a href="/logout" class="nav-link"> Logout</a>
+            </li>
+          <% } else { %>
+          <li class="nav-item">
+            <a href="/login" class="nav-link">Login</a>
+          </li>
+          <% } %>
+        </ul>        
       </div>
     </div>
-    <tr><img src="F Logo!.png" height = "100px"/></tr>
   </nav>
