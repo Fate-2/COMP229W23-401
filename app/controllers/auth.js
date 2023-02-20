@@ -20,7 +20,7 @@ export function DisplayLoginPage(req, res, next){
                                     });
     }
 
-    return res.redirect('/movie-list');
+    return res.redirect('/contact-list');
 }
 
 
@@ -57,9 +57,10 @@ export function ProcessRegisterPage(req, res, next){
             return res.redirect('/register'); 
         }
 
-        return passport.authenticate('local')(req, res, function(){
+        return passport.authenticate('local'), (req, res, function(){
             return res.redirect('/')
         });
+
     });
 }
 

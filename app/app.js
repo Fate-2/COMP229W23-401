@@ -27,7 +27,7 @@ import { Secret, MongoURI } from '../config/index.js';
 
 // Import Routes
 import indexRouter from '../app/routes/index.js';
-import moviesRouter from '../app/routes/movies.js';
+import contactsRouter from '../app/routes/contacts.js';
 import authRouter from '../app/routes/auth.js';
 
 // Complete DB Configuration
@@ -77,7 +77,7 @@ passport.deserializeUser(User.deserializeUser());
 
 // Use Routes
 app.use('/',indexRouter);
-app.use('/', moviesRouter);
+app.use('/', contactsRouter);
 app.use('/', authRouter);
 
 export default app;

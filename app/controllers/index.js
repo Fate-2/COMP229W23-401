@@ -18,6 +18,6 @@ export function displayProjectsPage(req, res, next){
     res.render('index', {title: 'Projects', page: 'projects', displayName: UserDisplayName(req)});
 }
 
-export function displayContactPage(req, res, next){
-    res.render('index', {title: 'Contact', page: 'contact', displayName: UserDisplayName(req)});
+export function displayContact1Page(req, res, next){
+    res.render('index', {title: 'Contact', page: 'contact1', displayName: UserDisplayName(req)});
 }
